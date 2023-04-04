@@ -28,7 +28,7 @@ print(data.describe())
 print(data.info()) ## Displays the type of data (such as int, float, etc)
 
 ```
-Now, we will display the mean temperature, the humidity and wind speed with the help of plotly.express library. We will be displaying the data in form of a line graph.
+Now, we will display the mean temperature, the humidity and wind speed with the help of plotly.express library. We will be displaying the data in form of a line graph. We will also provide respective titles to each graph.
 
 ```Python
 
@@ -54,7 +54,7 @@ figure.show()
 The data should look something like this:
 ![image](https://user-images.githubusercontent.com/71218661/229749452-49400c66-18a2-4a5a-9b34-a5b7a81abeba.png)
 
-With the help of plotly express we can also display a comparison bewteen two coloums of a data set. For instance lets see the relationship between the Mean temperature and the Humidity. To this we can write our code like this.
+With the help of plotly express we can also display a comparison bewteen two coloums of a data set. For instance lets see the relationship between the Mean temperature and the Humidity. To this we can write our code like this:
 
 ```Python
 
@@ -67,8 +67,51 @@ figure.show()
 
 
 ```
+Moving on, for understanding weather and forecast it properly, we need to compare weather change over the years. This can be done with the help of the seaborn library. You can learn more about seaborn from https://www.geeksforgeeks.org/introduction-to-seaborn-python/. We will write our code as follows:
 
+```Python
 
-We will be using the Prophet model. What is Prophet model:
+#%% Temp change in delhi over the years
+plt.style.use('fivethirtyeight')
+plt.figure(figsize=(15, 10))
+plt.title("Temperature Change in Delhi Over the Years")
+sns.lineplot(data = data, x='month', y='meantemp', hue='year')
+plt.show()
+
+```
+
+Run your code and your data should be displayed in this way:
+![image](https://user-images.githubusercontent.com/71218661/229753025-9c88a868-ebd3-4b69-b85a-86ee1e515430.png)
+
+Now we will be using the Prophet model to display a forecast plot. What is Prophet model:
 Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. Since weather is a time series data, using prophet is the best fit.
+
+```
+
+#%% Changing data column names to ds and y for prophet
+forecast_data = data.rename(columns = {"date": "ds",
+                                       "meantemp": "y"})
+print(forecast_data)
+
+```
+Using the above code we change the column names to 'ds' and 'y', as Prophet model only accepts the data labeled as 'ds' and 'y'. Run the section and you should notice that the column labeled date has been chnaged to 'ds' and the meanteamp has been changed to 'y'.
+![image](https://user-images.githubusercontent.com/71218661/229754519-db9db3cb-0c76-4e53-b257-7025023bae8b.png)
+
+```
+
+#%% Using Prophet Model for forecast
+
+from prophet import Prophet
+from prophet.plot import plot_plotly, plot_components_plotly
+
+model = Prophet()
+model.fit(forecast_data)
+
+forecasts = model.make_future_dataframe(periods=365)
+predictions = model.predict(forecasts)
+plot_plotly(model, predictions)
+
+```
+Lastly run the above code and you will get a forecast plot like this:
+![image](https://user-images.githubusercontent.com/71218661/229754718-9f82011c-0d64-4610-9e98-ecb13ed60724.png)
 
