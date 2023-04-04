@@ -115,4 +115,4 @@ plot_plotly(model, predictions)
 Lastly run the above code and you will get a forecast plot like this:
 ![image](https://user-images.githubusercontent.com/71218661/229754718-9f82011c-0d64-4610-9e98-ecb13ed60724.png)
 
-However, this is what i have tried with the help of references and by understading the its concepts. I want to build more around this project and maybe try it with other data sets. I would love to take in advices in order to improve my project make it more reliable and efficient. Please do suggest changes if you can. Thank You!
+However, this is what I have tried with the help of references and by understading the its concepts. I want to build more around this project and maybe try it with other data sets. I would love to take in advices in order to improve my project make it more reliable and efficient. Please do suggest changes if you can. Thank You!
