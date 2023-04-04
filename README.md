@@ -88,7 +88,7 @@ Run your code and your data should be displayed in this way:
 Now we will be using the Prophet model to display a forecast plot. What is Prophet model:
 Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. Since weather is a time series data, using prophet is the best fit.
 
-```
+```Python
 
 #%% Changing data column names to ds and y for prophet
 forecast_data = data.rename(columns = {"date": "ds",
@@ -99,7 +99,7 @@ print(forecast_data)
 Using the above code we change the column names to 'ds' and 'y', as Prophet model only accepts the data labeled as 'ds' and 'y'. Run the section and you should notice that the column labeled date has been chnaged to 'ds' and the meanteamp has been changed to 'y'.
 ![image](https://user-images.githubusercontent.com/71218661/229754519-db9db3cb-0c76-4e53-b257-7025023bae8b.png)
 
-```
+```Python
 
 #%% Using Prophet Model for forecast
 
