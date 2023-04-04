@@ -1,5 +1,7 @@
 # Weather-Forecasting-using-Python
-Data science has a wide range of applications, from which studying of weather is a sub-topic. With the help of various refernces I have attempted to create a small project depicting the principles of data science (PDS). In Data Science, weather forecasting is an application of Time Series Forecasting where we use time-series data and algorithms to make forecasts for a given time. If you want to learn how to forecast the weather using your Data Science skills, this article is for you. In this article, I will take you through the task of weather forecasting using Python step by step.
+Data science has a wide range of applications, from which studying of weather is a sub-topic. With the help of various refernces I have attempted to create a small project depicting the principles of data science (PDS). 
+
+In Data Science, weather forecasting is an application of Time Series Forecasting where we use time-series data and algorithms to make forecasts for a given time. If you want to learn how to forecast the weather using your Data Science skills, this article is for you. In this article, I will take you through the task of weather forecasting using Python step by step.
 
 Weather forecasting is the task of forecasting weather conditions for a given location and time. With the use of weather data and algorithms, it is possible to predict weather conditions for the next 'n' number of days. For forecasting weather using Python, we need a dataset containing historical weather data based on a particular location. Here we are using a dataset on Kaggle based on the Daily weather data in New Delhi. ( You can access the dataset used in this porject from provided resources in this repo)
 
