@@ -97,6 +97,7 @@ print(forecast_data)
 
 ```
 Using the above code we change the column names to 'ds' and 'y', as Prophet model only accepts the data labeled as 'ds' and 'y'. Run the section and you should notice that the column labeled date has been chnaged to 'ds' and the meanteamp has been changed to 'y'.
+
 ![image](https://user-images.githubusercontent.com/71218661/229754519-db9db3cb-0c76-4e53-b257-7025023bae8b.png)
 
 ```Python
