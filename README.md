@@ -1,5 +1,5 @@
 # Weather-Forecasting-using-Python
-Data science has a wide range of applications, from which studying of weather is a sub-topic. With the help of various refernces I have attempted to create a small project depicting the principles of data science (PDS). 
+Data science has a wide range of applications, from which studying of weather is a sub-topic. With the help of various references I have attempted to create a small project depicting the principles of data science (PDS). 
 
 In Data Science, weather forecasting is an application of Time Series Forecasting where we use time-series data and algorithms to make forecasts for a given time. If you want to learn how to forecast the weather using your Data Science skills, this article is for you. In this article, I will take you through the task of weather forecasting using Python step by step.
 
